@@ -1,18 +1,32 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>my-first-website</title>
   <LINK href="styles.css" rel="stylesheet" type="text/css">
+  <link href="/css/all.css" rel="stylesheet" />
+  <link href="/css/bulma.css" rel="stylesheet" />
+  <script src="/js/all.js"></script>
+  <script src="/js/vue.js"></script>
+
 </head>
 
 <body>
-
-<img src="https://octodex.github.com/images/daftpunktocat-thomas.gif" id="octocat" alt="octocat-gif" />
-
-<!-- Change this code here by copy and pasting your template on line 15 -->
-<p>Welcome to your first GitHub Pages website!</p>
-
+    <section id="app">
+      <div class="">
+        {{test}}
+      </div> 
+    </section>
+    <script>
+      var app = new Vue({
+        el: "#app",
+        data: {
+          test: 'test krub'
+        }
+        })
+    </script>
 </body>
+
 </html>
