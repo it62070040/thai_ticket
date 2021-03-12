@@ -8,3 +8,11 @@ p {
     font-size: 12px;
     font-weight: bolder;
 }
+/* Important part */
+.modal-dialog{
+    overflow-y: initial !important
+}
+.modal-body{
+    height: 80vh;
+    overflow-y: auto;
+}

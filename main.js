@@ -1,11 +1,11 @@
-var home = new Vue({
-    el: '#home',
-    data: {
-        name: 'test krub',
+// var home = new Vue({
+//     el: '#home',
+//     data: {
+//         name: 'test krub',
   
-    },
-    methods:{
+//     },
+//     methods:{
        
-    }
+//     }
     
-})
+// })

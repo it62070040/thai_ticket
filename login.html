@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="styles.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <section id="home">
+
+        <button type="button" class="btn btn-danger" data-toggle="modal" data-target="#modalLogin">login</button>
+        <!-- modal login -->
+        <div class="modal fade" tabindex="-1" role="dialog" id="modalLogin" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <!-- <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                </div> -->
+                    <div class="modal-body ">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" >&times;</span>
+                        </button>
+                        <img class="mx-auto" src="/images/boot.png" alt="logo" style="width: 3vw; display: block;">
+                        <h3 class="text-center mt-3">เข้าสู่ระบบ</h3>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-control mt-5" id="" aria-describedby="emailHelp"
+                                    placeholder="อีเมล">
+                                <input type="password" class="form-control mt-3" id="" placeholder="รหัสผ่าน">
+                            </div>
+                            <button type="submit" class="btn btn-danger mx-auto"
+                                style="width: 10vw; display: block;">เข้าสู่ระบบ</button>
+                            <a href="#" class="btn mx-auto text-muted" style="width: 10vw; display: block;">ลืมรหัสผ่าน</a>
+                           
+                            <hr class="my-0">
+                        </form>
+                        <div class="text-center mt-3">
+                            <h6>หากท่านยังไม่ได้เป็นสมาชิก</h6>
+                            <a href="#" class="text-danger" class="close" data-dismiss="modal"  data-toggle="modal" data-target="#modalRegister">กรุณาสมัครสมาชิก</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal register -->
+        <div class="modal fade"  role="dialog" id="modalRegister" aria-hidden="true">
+            <div class="modal-dialog" role="document" >
+                <div class="modal-content">
+                    <div class="modal-body ">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true" >&times;</span>
+                        </button>
+                        <img class="mx-auto" src="/images/boot.png" alt="logo" style="width: 3vw; display: block;">
+                        <h3 class="text-center 
+                        mt-3">สมัครสมาชิก</h3>
+                        <small id="" class="form-text text-muted text-center">กรุณากรอกข้อมูลให้ครบถ้วน</small>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" class="form-control mt-5 " id="" placeholder="ชื่อ">
+                                <input type="text" class="form-control mt-3" id="" placeholder="นามสกุล">
+                                <input type="text" class="form-control mt-3" id="" placeholder="ชื่อบัญชีผู้ใช้">
+                                <input type="email" class="form-control mt-3" id="" aria-describedby="emailHelp"
+                                    placeholder="อีเมล">
+                                <input type="password" class="form-control mt-3" id="" placeholder="รหัสผ่าน">
+                                <input type="password" class="form-control mt-3" id="" placeholder="ยืนยันรหัสผ่าน">
+                                <label for="" class="mt-3">ที่อยู่</label>
+                                <textarea class="form-control " id="" rows="2"></textarea>
+                                <input type="text" class="form-control mt-3" id="" placeholder="เบอร์โทรศัพท์">
+                            </div>
+                            <button type="submit" class="btn btn-danger mx-auto"
+                                style="width: 10vw; display: block;">สมัครสมาชิก</button>
+                           
+                        </form>
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <script>
+        var home = new Vue({
+            el: '#home',
+            data: {
+                name: 'test krub',
+                modalLogin: false,
+                modalRegister: false
+            },
+            methods: {
+             
+            
+            }
+
+        })
+    </script>
+</body>
+
+</html>
