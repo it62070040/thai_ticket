@@ -1,3 +1,7 @@
+* {
+    margin:0;
+    padding:0;
+}
 h4,h3 {
     font-family: 'Prompt', sans-serif;
     font-size: 16px;
@@ -16,3 +20,46 @@ p {
     height: 80vh;
     overflow-y: auto;
 }
+.bg {
+    position:relative;
+    background-position: 50% 0%;
+    z-index: 6;
+    background-repeat: no-repeat;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    /* filter: brightness(70%) blur(10px); */
+}
+.event-billboard .box-img {
+    width: 300px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgb(0 0 0 / 30%);
+    position: relative;
+}
+.event-billboard .bg .img {
+    background-position: 50% 0%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+#but_buytic{
+    background-color: red;
+    color: white;
+    letter-spacing: 1.1px;
+    width: 100px;
+    border-radius: 20px;
+}
+/* #but_buytic + .item-hide :hover {
+    background-color: #31d858;
+    color: white;
+    font-size: 17px;
+    height: 30px;
+
+} */

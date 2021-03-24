@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>home</title>
+    <link href="styles.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+    <script src="/js/all.js"></script>
+    <script src="/js/vue.js"></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body style="position: relative; min-height: 100%; top: 0px;">
+    <section id="app">
+        <div class="box">
+            <!-- navbar -->
+            <div class="header" style="width: 100%;">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <a class="navbar-brand" href="#">
+                        <img src="/images/boot.png" width="30" height="30" alt="">
+                    </a>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">หน้าแรก</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">คอนเสิร์ต</a>
+                            </li>
+
+                        </ul>
+                        <form class="form-inline my-lg-0 ">
+                            <ul class="navbar-nav mr-auto">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="icon">
+                                            <i><img src="https://img.icons8.com/ios-glyphs/30/000000/search.png"
+                                                    style="width:25px;" /></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="icon">
+                                            <i><img src="https://img.icons8.com/pastel-glyph/64/000000/fast-delivery--v1.png"
+                                                    style="width:25px;" /></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#">
+                                        <span class="icon">
+                                            <i><img src="https://img.icons8.com/material-rounded/24/000000/appointment-reminders.png"
+                                                    style="width:25px;" /></i>
+                                        </span>
+                                    </a>
+                                </li>
+                                <button type="button" class="btn btn-danger" data-toggle="modal"
+                                    data-target="#modalLogin">เข้าสู่ระบบ</button>
+
+                                <!-- dropdown -->
+                                <!-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        เข้าสู่ระบบ
+                                    </a>
+                                        <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="#">ข้อมูลส่วนตัว</a>
+                                            <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <span class="icon">
+                                                <i><img src="https://img.icons8.com/carbon-copy/100/000000/ticket.png"
+                                                        style="width:20px;" /></i>
+                                            </span>
+                                            <span>ตั๋วของฉัน</span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span class="icon">
+                                                <i><img src="https://img.icons8.com/wired/64/000000/list.png"
+                                                        style="width:20px;" /></i>
+                                            </span>
+                                            <span>ประวัติการสั่งซื้อ</span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">
+                                            <span class="icon">
+                                                <i><img src="https://img.icons8.com/ios/24/000000/edit--v1.png"
+                                                        style="width:20px;" /></i>
+                                            </span>
+                                            <span>แก้ไขข้อมูลส่วนตัว</span>
+                                        </a>
+                                        <a class="dropdown-item" href="#">
+                                            <span class="icon">
+                                                <i><img src="https://img.icons8.com/ios/26/000000/lock--v1.png"
+                                                        style="width:20px;" /></i>
+                                            </span>
+                                            <span>เปลี่ยนรหัสผ่าน</span>
+                                        </a>
+                                        <div class="dropdown-divider"></div>
+                                        <a class="dropdown-item" href="#">ออกจากระบบ</a>
+                                    </div>
+                                </li> -->
+                            </ul>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+            <!-- modal login -->
+            <div class="modal" tabindex="-1" role="dialog" :class="{'is-active' : modalLogin}">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                </div> -->
+                        <div class="modal-body ">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true" @click="modalLogin = false">&times;</span>
+                            </button>
+                            <img class="mx-auto" src="/images/boot.png" alt="logo" style="width: 3vw; display: block;">
+                            <h3 class="text-center mt-3">เข้าสู่ระบบ</h3>
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control mt-5" id="" aria-describedby="emailHelp"
+                                        placeholder="อีเมล">
+                                    <input type="password" class="form-control mt-3" id="" placeholder="รหัสผ่าน">
+                                </div>
+                                <button type="submit" class="btn btn-danger mx-auto"
+                                    style="width: 10vw; display: block;">เข้าสู่ระบบ</button>
+                                <button type="button" class="btn mx-auto"
+                                    style="width: 10vw; display: block;">ลืมรหัสผ่าน</button>
+                                <hr class="my-0">
+                            </form>
+                            <div class="text-center mt-3">
+                                <h6>หากท่านยังไม่ได้เป็นสมาชิก</h6>
+                                <a href="#" class="text-danger" @click="register()">กรุณาสมัครสมาชิก</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- หน้าคอนเสิร์ต -->
+            <div class="event-billboard" style="background-color: black;">
+                <nav class="breadcrumb">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-12">
+                                <a href="/index.html" class="item"><i>หน้าหลัก</i></a>
+                                <a href="/concert/" class="item"><i>คอนเสิร์ต</i></a>
+                                <span class="item"><i>YOKEE PLAYBOY REBORN CONCERT</i></span>
+                            </div>
+                        </div>
+                    </div>
+                </nav>
+                <div class="content container">
+                    <div class="row justify-content-center">
+                        <div class="col-12 col-sm col-img" style="text-align: -webkit-center;">
+                            <div class="box-img">
+                                <img src="/images/1.jpg" alt="YOKEE PLAYBOY REBORN CONCERT"
+                                    title="YOKEE PLAYBOY REBORN CONCERT">
+                                <!-- countdown html -->
+                                <div class="box-ten-countdown" style="display:none;">
+                                    <div class="box-num">
+                                        <div class="num"></div>
+                                    </div>
+                                </div>
+                                <!-- / countdown html -->
+                            </div>
+
+
+                        <!-- รายละเอียด concert ข้างๆ -->
+                        </div>
+                        <div class="col-12 col-md mt-4">
+                            <div class="box-txt" style="color: aliceblue;">
+                                <div class="row">
+                                    <div class="col-12">
+                                        <p><a href="#"><small>คอนเสิร์ต</small></a></p>
+                                        <h1 class="title" style="color: aliceblue;">YOKEE PLAYBOY REBORN CONCERT</h1>
+                                    </div>
+                                </div>
+                                <div class="row row-detail">
+                                    <div class="col-12 col-md">
+                                        <ul class="event-detail-list">
+                                            <li class="item">
+                                                <i class="fas fa-calendar-alt"></i><small> วันที่แสดง</small>
+                                                <p class="txt">
+
+                                                    <span>วันเสาร์ที่ 10 เมษายน 2564</span>
+                                                </p>
+                                            </li>
+                                            <li class="item">
+                                                <i class="fas fa-map-marker-alt"></i><small> สถานที่แสดง</small>
+                                                <p class="txt">
+
+                                                    <span><a href="/venue/union-hall-union-mall.html"
+                                                            target="_blank">ยูเนี่ยน ฮอลล์, ศูนย์การค้ายูเนี่ยน
+                                                            มอลล์</a></span>
+                                                </p>
+                                            </li>
+                                            <li class="item">
+                                                <i class="fas fa-clock"></i><small> ประตูเปิด</small>
+                                                <p class="txt">
+
+                                                    <span>ก่อนการแสดงเริ่มประมาณ 30 นาที</span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="col-12 col-md-6 col-overlay">
+                                        <ul class="event-detail-list">
+                                            <li class="item">
+                                                <i class="fas fa-calendar-check"></i><small> วันเปิดจำหน่าย</small>
+                                                <p class="txt"><span>วันเสาร์ที่ 30 มกราคม
+                                                        2564, 10:00 น.</span></p>
+                                            </li>
+                                            <li class="item">
+                                                <i class="fas fa-dollar-sign"></i><small> ราคาบัตร</small>
+                                                <div class="txt">
+                                                    3,000 / 2,500 / 2,000 / 1,500 / 1,000 / 800
+                                                </div>
+                                            </li>
+                                            <li class="item">
+                                                <i class="fas fa-ticket-alt"></i>
+                                                <small> Ticket Status</small>
+                                                <p class="txt">
+
+                                                    <span class="ticket-status inline available"><span>ON SALE
+                                                            NOW</span></span>
+                                                </p>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-event-btn">
+                    <div class="box-item box-share">
+                        <div class="box">
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12" style="text-align: center;">
+                        <article class="event-detail">
+                            <section class="section" id="section-event-round">
+                                <h2 class="head mt-4 mb-4">ผังการแสดง &amp; รอบการแสดง </h2>
+                                <div class="body">
+                                    <!-- EVENT ROUND -->
+                                    <div class="event-detail-item" style="background-color: black; color:aliceblue;">
+                                        <div class="box-img pt-2">
+                                            <a href="/img_seat/prefix_1/2804/2804/2804-5fec7704d02ad-s.jpg" class="fancybox">
+                                                <i class="fas fa-map-marker-alt"></i>
+                                            </a>
+                                        </div>
+                                        <div class="box-txt">
+                                            <p>
+                                                <a href="/_venue.php?venue_id=12269" class="venue">ยูเนี่ยน ฮอลล์, ศูนย์การค้ายูเนี่ยน มอลล์</a>
+                                            </p>
+                                            <p><small class="txt-gray">ราคาบัตร</small><br>3,000 / 2,500 / 2,000 / 1,500 / 1,000 / 800 </p>
+
+                                        </div>
+                                        <div class="box-event-list" style="background-color: #222;">
+                                            <div class="head">
+                                                <div class="row" style="padding: 10px 0; border-bottom: 1px solid #000; margin: 0;">
+                                                    <div class="col-label col-6"><small>วันที่แสดง</small></div>
+                                                    <div class="col-btn col-6"><small>เวลา</small></div>
+                                                </div>
+                                            </div>
+                                            <div class="body">
+                                                <div class="row" style="padding: 10px 0; margin: 0;"> 
+                                                    <div class="col-label col-6" style="align-self: center;">
+                                                        <div class="date">วันเสาร์ที่ 10 เมษายน 2564 </div>
+                                                    </div>
+                                                    <div class="col-btn col-6" style="text-align: -webkit-center;">
+                                                        <span class="btn-item">
+                                                            <a id="but_buytic" class="btn btn-block ng-binding" onclick="" href="#">
+                                                            <span class="item-show">19:00</span>
+                                                            <!-- <span class="item-hide">ซื้อบัตร</span> -->
+                                                            </a>
+                                                        </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- / EVENT ROUND  -->
+
+                                    
+                                </div>
+                            </section>
+
+                            <section class="section detail mt-4 mb-4">
+                                <h2 class="head">รายละเอียด</h2>
+                                <div class="body">
+                                    <p>
+                                    </p>
+                                    <div style="text-align: center;">
+                                        <strong><img alt=""
+                                                src="https://cms.thaiticketmajor.com/imgUpload/imgeditor/yo01.jpg"></strong><br>
+                                        &nbsp;
+                                    </div>
+                                    <strong>โยคีเพลย์บอย (</strong><strong>YOKEE PLAYBOY) </strong><strong>คือ
+                                        ชื่อศิลปิน ของ โป้ ปิยะ ศาสตรวาหา (</strong><strong>Poe Piya Sastrawaha)
+                                    </strong><strong>หรือ โป้ โยคีเพลย์บอย นักร้อง นักดนตรี นักแต่งเพลง โปรดิวเซอร์
+                                        เขาคือศิลปินเดี่ยวที่นำเสนองานเพลงในรูปแบบ “วงดนตรี”
+                                        เจ้าของผลงานเพลงที่มีเอกลักษณ์ เป็นที่ชื่นชอบและเป็นที่จดจำมากมายนับไม่ถ้วน
+                                        ตั้งแต่ปี </strong><strong>2539</strong><strong>
+                                        เป็นต้นมาจนถึงบัจจุบัน</strong><br>
+                                    <br>
+                                    <strong>ในปี </strong><strong>2539</strong><strong> &nbsp;โป้ ได้รับโอกาส จาก
+                                        สมเกียรติ อริยะชัยพาณิชย์ บอย โกสิยพงษ์ และ กมล สุโกศล แคลปป์
+                                        เหล่าขุนพลผู้บริหารนักสร้างศิลปินมือทองของค่ายเบเกอรี่มิวสิคให้ได้เซนสัญญาเป็นศิลปินในนาม
+                                        “โยคีเพลย์บอย” โป้จึงได้นำเพลงที่เขาแต่งไว้ทั้งหมด
+                                        มาบันทึกเสียงออกเป็นสตูดิโออัลบั้มแรก ที่มีชื่อเดียวกันว่า</strong>
+                                    <strong>“โยคีเพลย์บอย” </strong>ในตอนนั้นเพลงของโป้ยังไม่ได้รับความนิยมสักเท่าไรนัก
+                                    ด้วยความที่แนวเพลงที่ไม่เหมือนใครของเขามันช่างแตกต่างและยากที่จะคุ้นหูในสมัยนั้น
+                                    จึงไม่มีใครคาดคิดมาก่อนว่าอัลบั้มแรกนี้เองจะได้กลายเป็นงานมาสเตอร์พีซ
+                                    ที่ได้รับการยอมรับอย่างแพร่หลายในเวลาต่อมาจนถึงบัจจุบัน
+                                    ว่าเป็นงานเพลงที่น่าฟังด้วยความโดดเด่นทั้งตัวเพลงและคุณภาพการบันทึกเสียง
+                                    อีกทั้งยังสามารถสร้างแรงบันดาลใจให้กับผู้ฟัง
+                                    และศิลปินรุ่นน้องหลายๆคนในยุคต่อมาอีกด้วย&nbsp;<br>
+                                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>
+                                    โยคีเพลย์บอยได้ผลิตงานออกมาอย่างต่อเนื่อง ตามลำดับได้แก่ EP อัลบั้ม Super Swinging
+                                    (2541) อัลบั้ม YKPB (2543) อัลบั้ม LOVE TREND (2545) อัลบั้มรวมฮิตและเพลงพิเศษ THE
+                                    GREATEST GRANDFATHER HITS (2546)
+                                    ซึ่งล้วนประสบความสำเร็จและได้รับความนิยมเป็นอย่างมาก โดยมีเพลงฮิตติดอันดับมากมาย
+                                    อย่างเช่น ทำร้าย คืนนี้ขอหอม อีกแล้ว พรหมลิขิต วันเกิด ขอให้ผม เป็นต้น ต่อมาในปี
+                                    2552 โยคีเพลย์บอยได้ร่วมงานกับค่าย PLENTY MUSIC มีผลงานอัลบั้ม TELEPATHY (2552)
+                                    และในปี 2554 ได้ร่วมงานกับค่าย SPICY DISC มีผลงานอัลบั้ม SECOND SUN (2555)
+                                    &nbsp;และตั้งแต่ปี 2557 จนถึงบัจจุบัน โยคีเพลย์บอย
+                                    ยังคงเดินหน้าผลิตงานออกมาในฐานะศิลปินอิสระ&nbsp; มีผลงานเพลงได้แก่ อีพี “อาฮะ”
+                                    (2557) และ EP &nbsp;WE EPISODE 1-4 (2560-61-62-63) <strong>ซึ่งจะรวมเป็น
+                                        สตูดิโออัลบั้ม </strong><strong>WE ARE NEW OLD
+                                    </strong><strong>ในปี</strong><strong> 2564
+                                    </strong><strong>โดยจะเปิดตัวอัลบั้มพร้อมกับคอนเสิร์ตใหญ่ที่สุดในรอบ
+                                    </strong><strong>25 </strong><strong>ปี ที่มีชื่อว่า </strong><strong>YOKEE PLAYBOY
+                                        REBORN CONCERT </strong><strong>ซึ่งมีกำหนดจัดขึ้นในวันที
+                                        &nbsp;</strong><strong>10 </strong><strong>&nbsp;เม.ย.
+                                    </strong><strong>2564</strong><strong> ที่ยูเนี่ยน ฮอลล์ ศูนย์การค้า
+                                        ยูเนี่ยนมอลล์</strong>&nbsp;<br>
+                                    <br>
+                                    งานเพลงของโยคีเพลย์บอยนั้นมีหลากหลายแนวเพลงผสมผสาน
+                                    และปรับเปลี่ยนไปตามความสนใจที่เปลี่ยนไปตามกาลเวลาของโป้
+                                    ผู้ซึ่งคลั่งไคล้ในการทำเพลงอย่างที่ไม่น่าจะมีอะไรมาหยุดยั้งเขาได้ โดยแนวดนตรีหลักๆ
+                                    ที่โป้ชอบคือ &nbsp;Soul &nbsp;Funk &nbsp;Pop และ Rock เป็นต้น
+                                    &nbsp;ในส่วนของการทำงานประพันธ์ตลอดจน บันทึกเสียงและงานแสดงดนตรีในคอนเสิร์ตต่างๆ
+                                    ตั้งแต่อดีตจนถึงบัจจุบัน โยคีเพลย์บอย
+                                    จะมีทีมนักดนตรีมากฝีมือที่ร่วมงานกับโป้มาโดยตลอด &nbsp;ตั้งแต่ยุคแรกเริ่ม จะมี ซี
+                                    เฟาซี มามะ (กีตาร์) ปาเดย์ ภาณุ กันตะบุตร (เบส) ยิ่งใหญ่ หุณชนะเสวีย์ (กลอง) และ
+                                    *ฆ้อง มงคล (คีบอร์ด ฟลุท กีตาร์โปร่ง) ผู้แต่งท่วงทำนองไพเราะอย่าง เพลงคืนนี้ขอหอม
+                                    ขอให้ผม ใจน้อย และเพื่อนใหม่ ร่วมด้วยนักดนตรีในยุคต่อมาจนบัจจุบันได้แก่&nbsp; นรเทพ
+                                    มาแสง (เบส) มาตรชัย มะกรูดทอง (กลอง ) อดุลย์ รัชดาภิสิทธิ์ (กีตาร์) อาณัติ ทองก้อน
+                                    (เบส) *หนุ่ม พิทยา ศิริสวัสดิ์ (กลอง) *สุทัศน์ เพ็ชรมี (เบส) *มิ้ม ญานสิทธิ์
+                                    ศรีศศิวิไล (กีตาร์)&nbsp; (หมายเหตุ - *นักดนตรีบัจจุบัน)<br>
+                                    <br>
+                                    <strong>INFO LINK : </strong>
+                                    <a href="http://www.facebook.com/YKPBpage">
+                                        <strong>www.facebook.com/YKPBpage</strong>
+                                    </a><br>
+                                    <strong>Social Media: &nbsp;&nbsp;Facebook: YKPB&nbsp;&nbsp; / Youtube: Yokee
+                                        Playboy Official / Instagram: YKPB_Official /Twitter: @YKPB</strong><br>
+                                </section>
+                        </article>
+                    </div>
+                </div>
+            </div>
+
+
+            <!-- modal login -->
+            <div class="modal fade" tabindex="-1" role="dialog" id="modalLogin" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <!-- <div class="modal-header">
+                  <h5 class="modal-title">Modal title</h5>
+                </div> -->
+                        <div class="modal-body ">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img class="mx-auto" src="/images/boot.png" alt="logo" style="width: 3vw; display: block;">
+                            <h3 class="text-center mt-3">เข้าสู่ระบบ</h3>
+                            <form>
+                                <div class="form-group">
+                                    <input type="email" class="form-control mt-5" id="" aria-describedby="emailHelp"
+                                        placeholder="อีเมล">
+                                    <input type="password" class="form-control mt-3" id="" placeholder="รหัสผ่าน">
+                                </div>
+                                <button type="submit" class="btn btn-danger mx-auto"
+                                    style="width: 10vw; display: block;">เข้าสู่ระบบ</button>
+                                <a href="#" class="btn mx-auto text-muted"
+                                    style="width: 10vw; display: block;">ลืมรหัสผ่าน</a>
+
+                                <hr class="my-0">
+                            </form>
+                            <div class="text-center mt-3">
+                                <h6>หากท่านยังไม่ได้เป็นสมาชิก</h6>
+                                <a href="#" class="text-danger" class="close" data-dismiss="modal" data-toggle="modal"
+                                    data-target="#modalRegister">กรุณาสมัครสมาชิก</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- modal register -->
+            <div class="modal fade" role="dialog" id="modalRegister" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-body ">
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                            <img class="mx-auto" src="/images/boot.png" alt="logo" style="width: 3vw; display: block;">
+                            <h3 class="text-center 
+                        mt-3">สมัครสมาชิก</h3>
+                            <small id="" class="form-text text-muted text-center">กรุณากรอกข้อมูลให้ครบถ้วน</small>
+                            <form>
+                                <div class="form-group">
+                                    <input type="text" class="form-control mt-5 " id="" placeholder="ชื่อ">
+                                    <input type="text" class="form-control mt-3" id="" placeholder="นามสกุล">
+                                    <input type="text" class="form-control mt-3" id="" placeholder="ชื่อบัญชีผู้ใช้">
+                                    <input type="email" class="form-control mt-3" id="" aria-describedby="emailHelp"
+                                        placeholder="อีเมล">
+                                    <input type="password" class="form-control mt-3" id="" placeholder="รหัสผ่าน">
+                                    <input type="password" class="form-control mt-3" id="" placeholder="ยืนยันรหัสผ่าน">
+                                    <label for="" class="mt-3">ที่อยู่</label>
+                                    <textarea class="form-control " id="" rows="2"></textarea>
+                                    <input type="text" class="form-control mt-3" id="" placeholder="เบอร์โทรศัพท์">
+                                </div>
+                                <button type="submit" class="btn btn-danger mx-auto"
+                                    style="width: 10vw; display: block;">สมัครสมาชิก</button>
+
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+    </section>
+
+    <script>
+
+    </script>
+</body>
+
+</html>
